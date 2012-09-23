@@ -1,5 +1,6 @@
 (ns clj-elevator.core
-    (:require [clj-msgpack.core :as mp])
+    (:require [clj-msgpack.core :as mp]
+    		  [org.zeromq.clojure :as zmq])
     (:gen-class))
 
 (defn request [db_uid command & args]
@@ -11,6 +12,8 @@
             (interleave [:status :content]
                             [(first umsg) (rest umsg)]))))
 
+(defn sendcmd [req])
+
 (defn connect [req])
 
 (defn listdb [req])
@@ -21,13 +24,11 @@
 
 (defn repairdb [req])
 
-(defn send [req])
+(defn Get [req])
 
-(defn get [req])
+(defn Put [req])
 
-(defn put [req])
-
-(defn delete [req])
+(defn Delete [req])
 
 (defn -main [& args]
     (print "It works!"))
