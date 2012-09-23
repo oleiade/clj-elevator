@@ -11,5 +11,23 @@
             (interleave [:status :content]
                             [(first umsg) (rest umsg)]))))
 
+(defn connect [req])
+
+(defn listdb [req])
+
+(defn createdb [req])
+
+(defn dropdb [req])
+
+(defn repairdb [req])
+
+(defn send [req])
+
+(defn get [req])
+
+(defn put [req])
+
+(defn delete [req])
+
 (defn -main [& args]
     (print "It works!"))
